@@ -48,16 +48,6 @@ const SignUp = () => {
     }
   };
 
-  const handleGoogleSignUp = async () => {
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: "google",
-      options: { redirectTo: `${window.location.origin}/dashboard` },
-    });
-    if (error) {
-      toast({ title: "Google sign up failed", description: error.message, variant: "destructive" });
-    }
-  };
-
   return (
     <div className="min-h-screen bg-background flex items-center justify-center px-4 py-10">
       <motion.div
