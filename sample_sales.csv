@@ -1,0 +1,11 @@
+date,product,quantity,price,customer_id
+2023-01-01,Product A,10,100.00,1
+2023-01-02,Product B,5,50.00,2
+2023-01-03,Product A,8,80.00,1
+2023-01-04,Product C,3,30.00,3
+2023-01-05,Product A,12,120.00,2
+2023-01-06,Product B,7,70.00,1
+2023-01-07,Product C,4,40.00,4
+2023-01-08,Product A,9,90.00,3
+2023-01-09,Product B,6,60.00,2
+2023-01-10,Product A,11,110.00,1

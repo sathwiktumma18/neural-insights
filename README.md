@@ -1,73 +1,144 @@
-# Welcome to your Lovable project
+# Neural Insights - Business AI Dashboard
 
-## Project info
+A comprehensive AI-powered business intelligence platform for sales prediction, customer segmentation, and data-driven decision making.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Features
 
-## How can I edit this code?
+- **Sales Prediction**: Forecast future sales using machine learning
+- **Customer Segmentation**: Automatically group customers based on behavior
+- **Business Dashboard**: Real-time insights and visualizations
+- **Data Upload**: Secure CSV upload for sales and customer data
+- **Marketing Recommendations**: AI-powered campaign strategies
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+### Backend
+- **Python** with Flask
+- **SQLite** database (no setup required)
+- **Scikit-learn** for ML models
+- **Pandas/Numpy** for data processing
+- **Matplotlib/Seaborn** for visualizations
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### Frontend
+- **React** with TypeScript
+- **Vite** for build tooling
+- **Shadcn/UI** components
+- **Recharts** for data visualization
+- **React Query** for API state management
 
-Changes made via Lovable will be committed automatically to this repo.
+## Quick Start
 
-**Use your preferred IDE**
+### 1. Install Backend Dependencies
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```bash
+cd backend
+pip install -r requirements.txt
 ```
 
-**Edit a file directly in GitHub**
+### 2. Install Frontend Dependencies
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm install
+```
 
-**Use GitHub Codespaces**
+### 3. Run the Application
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1. Start the backend:
+   ```bash
+   python backend/app.py
+   ```
+   The backend will run on http://localhost:5000
 
-## What technologies are used for this project?
+2. In a new terminal, start the frontend:
+   ```bash
+   npm run dev
+   ```
+   The frontend will run on http://localhost:8080 (or the port shown in the terminal)
 
-This project is built with:
+### 4. Test with Sample Data
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1. Go to the Data Upload page in the app
+2. Upload `sample_sales.csv` as Sales Data
+3. Upload `sample_customers.csv` as Customer Data
+4. Go to the Dashboard to see the data
+5. Train models and generate predictions
 
-## How can I deploy this project?
+## Usage
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+### 1. Upload Data
 
-## Can I connect a custom domain to my Lovable project?
+- Go to the Data Upload page
+- Upload CSV files for sales and customer data
+- Follow the required column formats shown on the page
 
-Yes, you can!
+### 2. Train Models
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- Upload sales data to train the sales prediction model
+- Upload customer data to train the customer segmentation model
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### 3. View Dashboard
+
+- Check the main dashboard for real-time insights
+- View sales trends and customer segments
+- Monitor key business metrics
+
+### 4. Generate Forecasts
+
+- Go to the Forecasting page
+- Select the number of months to predict
+- View predicted sales with confidence intervals
+
+## Data Formats
+
+### Sales Data CSV
+Required columns:
+- `date` (YYYY-MM-DD)
+- `product` (string)
+- `quantity` (number)
+- `price` (number)
+- `customer_id` (number)
+
+### Customer Data CSV
+Required columns:
+- `name` (string)
+- `email` (string)
+- `age` (number)
+- `location` (string)
+- `total_spent` (number)
+
+## API Endpoints
+
+- `POST /api/upload-data` - Upload CSV data
+- `POST /api/train-sales-model` - Train sales prediction model
+- `POST /api/predict-sales` - Get sales predictions
+- `POST /api/train-customer-segmentation` - Train customer segmentation
+- `GET /api/get-customer-segments` - Get customer segments
+- `GET /api/get-dashboard-data` - Get dashboard metrics
+- `GET /api/get-marketing-recommendations` - Get marketing insights
+
+## Development
+
+### Running Tests
+```bash
+npm run test
+```
+
+### Building for Production
+```bash
+npm run build
+```
+
+### Backend Development
+The Flask app supports hot reloading. Any changes to `app.py` will automatically restart the server.
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License.

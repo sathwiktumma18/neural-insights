@@ -1,0 +1,11 @@
+name,email,age,location,total_spent
+John Doe,john@example.com,35,New York,500.00
+Jane Smith,jane@example.com,28,California,750.00
+Bob Johnson,bob@example.com,42,Texas,300.00
+Alice Brown,alice@example.com,31,Florida,600.00
+Charlie Wilson,charlie@example.com,25,New York,400.00
+Diana Davis,diana@example.com,38,California,800.00
+Edward Miller,edward@example.com,45,Texas,550.00
+Fiona Garcia,fiona@example.com,29,Florida,450.00
+George Lee,george@example.com,33,New York,650.00
+Helen Taylor,helen@example.com,40,California,700.00
