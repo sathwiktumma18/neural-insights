@@ -70,7 +70,6 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <div className="fixed top-4 left-4 z-50 rounded-md bg-black/70 px-3 py-1 text-xs text-white">React is mounted</div>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Landing />} />
